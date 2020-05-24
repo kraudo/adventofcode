@@ -22,7 +22,7 @@ calcFrequency x (n:ns) =
 
 main :: IO ()
 main = do
-  inputs <- readFile "list.txt"
+  inputs <- readFile "freqs.txt"
   let freqs = map parseInt . words $ inputs
   putStrLn $ "Total frequencies: " ++ (show . length) freqs
   putStrLn $ "Result frequency: " ++ show (calcFrequency 0 freqs)
